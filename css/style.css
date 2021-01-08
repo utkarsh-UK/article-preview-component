@@ -3,7 +3,8 @@ html, body {
     text-align: center;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     font-family: 'Manrope', sans-serif;
 }
 
@@ -69,17 +70,16 @@ p {
 
 .profile-content {
     display: flex;
-    flex: 2;
     align-items: center;
 }
 
-.share-icon {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
+.circle {
+    width: 10px;
+    height: 10px; 
     border-radius: 100%;
     background-color: hsl(210, 46%, 95%);
-    transform: scale(0.38);
+    padding: 10px;
+    line-height: inherit;
 }
 
 .description-container {
@@ -89,11 +89,36 @@ p {
     border-radius: 7px;
 }
 
+.tooltip {
+    display: inline-block;
+    width: 100%;
+    background-color: hsl(217, 19%, 35%);
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.tooltip p {
+    display: inline;
+    margin: 0 20px 0 0;
+    letter-spacing: 2.5px;
+}
+
+.fab {
+    display: inline;
+    color: #fff;
+    margin-right: 6px;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
-@media screen and (max-width: 675px) {
+.circle:hover {
+    background-color: hsl(214, 17%, 51%);
+}
+
+@media screen and (max-width: 775px) {
     .container {
         flex-direction: column;
         width: 80%;
@@ -109,5 +134,22 @@ p {
 
     .description-container {
         padding: 5px 20px 5px 25px;
+    }
+
+    .profile {
+        justify-content: space-between;
+    }
+
+    .profile-content {
+        flex: 0.6;
+    }
+
+    .profile img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .share-icon {
+        flex: 0.3;
     }
 }

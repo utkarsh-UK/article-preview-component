@@ -19,12 +19,30 @@
       rel="stylesheet"
     />
 
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Article preview component</title>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body>
+    <template id="tooltip-temp">
+      <span class="tooltip">
+        <p>SHARE</p>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest-square"></i>
+      </span>
+    </template>
+
     <div class="container">
       <!-- Drawer image -->
       <img src="images/drawers.jpg" alt="Drawer" />
@@ -50,11 +68,14 @@
               <p>28 Jun 2020</p>
             </div>
           </div>
-          <img
+          <div id="share-profile" class="circle">
+            <i class="fas fa-share fa-1x share-icon"></i>
+          </div>
+          <!-- <img
             class="share-icon"
             src="images/icon-share.svg"
             alt="Share Icon"
-          />
+          /> -->
         </div>
       </div>
     </div>
