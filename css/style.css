@@ -89,6 +89,11 @@ p {
     border-radius: 7px;
 }
 
+.tooltip-container {
+    position: relative;
+    display: block;
+}
+
 .tooltip {
     display: inline-block;
     width: 100%;
@@ -102,6 +107,15 @@ p {
     display: inline;
     margin: 0 20px 0 0;
     letter-spacing: 2.5px;
+}
+
+.skew {
+  width: 25px;
+  height: 25px;
+  background-color: hsl(217, 19%, 35%);
+  top: 300px;
+  left: 275px;
+  transform: rotate(45deg);
 }
 
 .fab {
